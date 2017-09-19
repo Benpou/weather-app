@@ -13,3 +13,4 @@ var getUser = (id, callback) => {
 getUser(23, (userObject) => {
     console.log(userObject);
 })
+
