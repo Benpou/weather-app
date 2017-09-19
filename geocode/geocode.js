@@ -30,6 +30,29 @@ var geocodeAddress = function (address, callback) {
     });
 };
 
+var apiKey = 'e9734bda547aa4d2c944c22bcabae074';
+
+//temp = '';
+var forcast = function (lat, lng, callback) {
+
+    request({
+        url: `https://api.darksky.net/forecast/e9734bda547aa4d2c944c22bcabae074/${lat},${lng}`,
+        json: true
+    }, (error, response, body) => {
+        if (error) {
+            callback('There is an ERROR on URL !');
+        } else {
+            callback(undefined, body.currently.temperature);
+        }
+        //console.log(body.currently.temperature);
+        //return body.currently.temperature;
+
+    });
+
+}
 
 
 module.exports.geocodeAddress = geocodeAddress;
+module.exports.forcast = forcast;
+
+//
