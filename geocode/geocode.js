@@ -55,4 +55,10 @@ var forcast = function (lat, lng, callback) {
 module.exports.geocodeAddress = geocodeAddress;
 module.exports.forcast = forcast;
 
-//
+
+var add = (a, b) => {
+    return a + b;
+};
+
+module.exports.add = add;
+//console.log(add(2, 5));

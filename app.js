@@ -17,11 +17,14 @@ const argv = yargs
         .argv
 
 geocode.geocodeAddress(argv.address, (errorMessage, results) => {
+
     if (errorMessage) {
         console.log(errorMessage)
     } else {
         console.log(JSON.stringify(results, undefined, 2));
+
         geocode.forcast(results.lat, results.lng, (error, temp) => {
+
             if (error) {
                 console.log(error);
             } else {
