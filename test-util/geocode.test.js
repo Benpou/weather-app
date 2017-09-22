@@ -4,7 +4,7 @@ const geocode = require('../geocode/geocode');
 it('should add two number', () => {
     var results = geocode.add(3, 10);
 
-    expect(results).toBe(13).toBeA('number');
+    expect(results).toBe(13);
 });
 
 
